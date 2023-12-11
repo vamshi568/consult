@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background-color: #b8d2e4;
+  color: #156669;
+}
+sub {
+  font-size: 13px;
+}
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+}
+.main1 h1 {
+  font-size: 100px;
+  font-weight: 550;
+}
+.main2 img {
+  border-radius: 50%;
+  height: 400px;
+  width: 400px;
+}
+.main2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logo{
+  clip-path: circle(23% at 50% 52%);
+
+}
+.main1 h2 {
+  font-size: 45px;
+  font-weight: 500;
+}
+.section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  height: 100vh;
+}
+.section img{
+    width: 400px;
+    height: 300px;
+}
+section h2 {
+    font-size: 80px;
+    
+}
+section p{
+  font-size: 30px;
+  line-height: 50px;
+}
+.cliping{
+  
+  clip-path: polygon(10% 25%, 35% 25%, 35% 0%, 65% 0%, 65% 25%, 90% 25%, 90% 50%, 65% 50%, 64% 79%, 35% 80%, 35% 50%, 10% 50%);
+}
