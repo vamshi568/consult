@@ -10,48 +10,133 @@
       src="https://kit.fontawesome.com/b150de7fc7.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll("nav a");
+
+        links.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: "smooth",
+            });
+          });
+        });
+      });
+
+      function bla() {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      }
+      function bla1() {
+        document.getElementById("mobile-menu").classList.add("hidden");
+      }
+    </script>
   </head>
   <body>
-    <nav
-      class="flex h-18 w-screen justify-between items-center bg-white rounded-b-lg"
-    >
-      <img class="h-28 w-28 logo ml-5" src="page6.png" alt="logo" />
-      <div class="flex gap-x-5 mr-8">
-        <a
-          href=""
-          class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-          >Home</a
-        >
-        <a
-          href=""
-          class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-          >About us</a
-        >
-        <a
-          href=""
-          class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-          >Know more</a
-        >
-        <a
-          href=""
-          class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-          >Contact Us</a
-        >
+    
+    <nav class="bg-white">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="text-white text-lg font-bold">
+          <img class="h-28 w-28 logo ml-5" src="page6.png" alt="logo" />
+        </div>
+
+        <div class="hidden md:flex space-x-4">
+          <a
+            href="#home"
+            class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+            >Home</a
+          >
+          <a
+            href="#Aboutus"
+            class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+            >About us</a
+          >
+          <a
+            href="#Knowmore"
+            class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+            >Know more</a
+          >
+          <a
+            href="#contact"
+            class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+            >Contact Us</a
+          >
+        </div>
+
+        <div class="md:hidden">
+          <button
+            onclick="bla()"
+            id="menu-toggle"
+            class="text-gray-700 focus:outline-none mr-8"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"
+              ></path>
+            </svg>
+          </button>
+        </div>
       </div>
     </nav>
+    <nav
+      id="mobile-menu"
+      class="hidden sm:hidden bg-white text-gray-700 pb-4 border-t-2"
+    >
+      <a
+        onclick="bla1()"
+        href="#home"
+        class="block text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+        >Home</a
+      >
+      <a
+        onclick="bla1()"
+        href="#Aboutus"
+        class="block text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+        >About us</a
+      >
+      <a
+        onclick="bla1()"
+        href="#Knowmore"
+        class="text-black block hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+        >Know more</a
+      >
+      <a
+        onclick="bla1()"
+        href="#contact"
+        class="text-black block hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+        >Contact Us</a
+      >
+    </nav>
 
-    <header>
-      <div class="main1">
+    <header id="home">
+      <div class="main1 z-10">
         <h1 class="leading-none">Your Health, <br />Our Mission</h1>
         <h2>Addressing every need</h2>
       </div>
-      <div class="main2">
+      <div class="main2 z-10">
         <img src="profile.png" alt="profile" />
         <h2 class="text-3xl font-semibold">Dr.Amruta <sub>MBBS</sub></h2>
       </div>
     </header>
-    <section class="section">
-      <div class="w-1/2">
+    <section
+      id="Aboutus"
+      class="section min-h-full sm:min-h-screen max-sm:mt-8"
+    >
+      <div class="sm:w-1/2 w-11/12">
         <h2 class="leading-none mb-8">
           Introduction: Our commitment to your well-being
         </h2>
@@ -66,14 +151,17 @@
       </div>
       <img src="page2.png" alt="" />
     </section>
-    <section class="flex justify-around ">
+    <section
+      id="Knowmore"
+      class="flex justify-around sm:min-h-screen max-sm:mt-8"
+    >
       <div class="w-11/12">
-        <div class="flex justify-between">
-          <h2 class="leading-none mb-8">
+        <div class="sm:flex justify-between">
+          <h2 class="leading-none mb-8 self-end">
             Scope of <br />
             HOMOEOPATHY
           </h2>
-          <img class="h-[250px] mb-6 w-[400px]" src="page3.png" alt="" />
+          <img class="sm:h-[18vw] mb-6 sm:w-[30vw]" src="page3.png" alt="" />
         </div>
         <p>Natural Healing: Harnessing the body's innate ability to heal.</p>
         <br />
@@ -91,9 +179,11 @@
         </p>
       </div>
     </section>
-    <section class="flex justify-around items-center content-center">
-      <div class="w-1/2">
-        <h2 class="leading-none mb-8 text-[80px]">
+    <section
+      class="flex max-sm:flex-col w-full justify-around items-center sm:max-h-screen max-sm:mt-8"
+    >
+      <div class="sm:w-1/2 w-11/12">
+        <h2 class="leading-none mb-8">
           Personalized care: Listening to the patient
         </h2>
         <p>
@@ -102,19 +192,27 @@
           .
         </p>
       </div>
-      <img class="cliping h-[600px] w-[600px]" src="page3.png" alt="" />
+      <img
+        class="cliping sm:h-[30vw] sm:w-[30vw] h-[80vw] w-[80vw]"
+        src="plus.png"
+        alt=""
+      />
     </section>
-    <section class="text-center flex flex-col justify-center">
-      <h2 class="mb-20">Your health, always our priority</h2>
-      <p>
+    <section
+      class="text-center flex flex-col justify-center sm:min-h-screen items-center"
+    >
+      <h2 class="mb-[5vw]">Your health, always our priority</h2>
+      <p class="w-11/12">
         💬Ready to Begin your Holistic Healing Journey? DM us to book an online
         consultation and experience the gentle effectiveness of homeopathy! 🌿✨
       </p>
     </section>
-    <section class="section">
-      <div class="w-1/2">
+    <section
+      class="max-sm:flex-col flex justify-around items-center max-sm:mt-16"
+    >
+      <div class="sm:w-1/2 w-11/12">
         <h2 class="leading-none font-extrabold mb-8">
-          why choose <br />
+          Why choose <br />
           DR.AMRUTA' S HOMOEO
         </h2>
         <p>
@@ -130,28 +228,36 @@
           specific health concerns.
         </p>
       </div>
-      <img class="h-auto w-auto" src="page6.png" alt="" />
+      <img class="max-sm:hidden h-[25vw] w-[25vw]" src="page6.png" alt="" />
     </section>
-    <section class="flex  justify-around mt-10">
-      <div>
-        <img class="w-1/2" src="page7.png" alt="" />
-        <p class="mt-8 ml-3 text-5xl">Contact Us</p>
+    <section
+      id="contact"
+      class="max-sm:flex-col flex justify-around items-center mt-10"
+    >
+      <div
+        class="sm:w-1/2 w-full max-sm:flex justify-center flex-col items-center max-sm:bg-white max-sm:pb-3"
+      >
+        <img class="sm:w-1/2 w-full" src="page7.png" alt="" />
+        <p class="mt-8 text-[3vw]">Contact Us</p>
         <a
           href="https://wa.me/+919490414679"
           target="_blank"
-          class="text-7xl flex items-center mt-10 ml-8"
+          class="text-[4vw] flex items-center mt-[3vw]"
           ><i class="fa-brands fa-whatsapp"></i>
-          <p class="ml-8 text-5xl">9490414679</p></a
+          <p class="ml-[2vw] text-[4vw]">9490414679</p></a
         >
         <a
           href="https://www.instagram.com/dr.amrutas_homoeo/?hl=en"
           target="_blank"
-          class="text-7xl flex items-center mt-10 ml-8"
+          class="text-[4vw] flex items-center mt-[2vw]"
           ><i class="fa-brands fa-instagram"></i>
-          <p class="ml-8 text-5xl">dr.amrutas_homoeo</p></a
+          <p class="ml-[2vw] text-[4vw]">dr.amrutas_homoeo</p></a
         >
       </div>
-      <img class="w-1/2 h-auto" src="page7-2.png" alt="" />
+      <img class="max-sm:hidden w-4/12 h-auto" src="page7-2.png" alt="" />
     </section>
+    <p class="text-right mr-3 p-2">
+      <i class="fa-regular fa-copyright"></i> 2023 Amrutha's Homeopathy
+    </p>
   </body>
 </html>
