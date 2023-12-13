@@ -92,7 +92,7 @@ section p{
 }
 header{
   position: relative;
-  background-image: url(profile23.png);
+  background-image: url(public/profile23.png);
   background-size: cover;
   color: #b8d2e4;
   height: 60vh;
@@ -118,5 +118,8 @@ header::before {
 }
 body{
   text-align: center;
+  
 }
 }
+
+

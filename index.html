@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Amrutha's cares</title>
     <link rel="stylesheet" href="index.css" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script
       src="https://kit.fontawesome.com/b150de7fc7.js"
@@ -38,11 +39,10 @@
     </script>
   </head>
   <body>
-    
     <nav class="bg-white">
       <div class="container mx-auto flex justify-between items-center">
         <div class="text-white text-lg font-bold">
-          <img class="h-28 w-28 logo ml-5" src="page6.png" alt="logo" />
+          <img class="h-28 w-28 logo ml-5" src="public/page6.png" alt="logo" />
         </div>
 
         <div class="hidden md:flex space-x-4">
@@ -128,8 +128,10 @@
         <h2>Addressing every need</h2>
       </div>
       <div class="main2 z-10">
-        <img src="profile.png" alt="profile" />
-        <h2 class="text-3xl font-semibold">Dr.Amruta <sub>MBBS</sub></h2>
+        <img src="public/profile23.png" alt="profile" />
+        <h2 class="sm:text-[3vw] text-[5vw] font-semibold">
+          Dr.Amruta Lahari <sub>BHMS</sub>
+        </h2>
       </div>
     </header>
     <section
@@ -149,7 +151,7 @@
           and effective remedies for holistic wellness.
         </p>
       </div>
-      <img src="page2.png" alt="" />
+      <img src="public/page2.png" alt="" />
     </section>
     <section
       id="Knowmore"
@@ -161,7 +163,11 @@
             Scope of <br />
             HOMOEOPATHY
           </h2>
-          <img class="sm:h-[18vw] mb-6 sm:w-[30vw]" src="page3.png" alt="" />
+          <img
+            class="sm:h-[18vw] mb-6 sm:w-[30vw]"
+            src="public/bottle.jpg"
+            alt=""
+          />
         </div>
         <p>Natural Healing: Harnessing the body's innate ability to heal.</p>
         <br />
@@ -180,32 +186,78 @@
       </div>
     </section>
     <section
-      class="flex max-sm:flex-col w-full justify-around items-center  sm:max-h-screen max-sm:mt-8"
+      class="flex max-sm:flex-col w-full justify-around items-center sm:min-h-screen max-sm:mt-8"
+    >
+      <div class="sm:w-1/2 w-11/12">
+        <h2 class="leading-none mb-8">Perks of online consultation</h2>
+        <p>
+          🕒 Flexible Appointments: Schedule consultations at your convenience.
+        </p>
+        <p>
+          🌟 Expert Guidance: Receive personalized advice from certified
+          homeopaths.
+        </p>
+        <p>🌐 Access from Anywhere: Connect with us wherever you are.</p>
+      </div>
+      <img
+        class="sm:h-[20vw] sm:w-[30vw] h-[60vw] w-[100%] max-sm:mt-4"
+        src="public/online.png"
+        alt=""
+      />
+    </section>
+    <section
+      class="flex max-sm:flex-col w-full justify-around items-center sm:min-h-screen max-sm:mt-8"
     >
       <div class="sm:w-1/2 w-11/12">
         <h2 class="leading-none mb-8">
           Personalized care: Listening to the patient
         </h2>
         <p>
-          we take brief case history of patient,our prescription based on the
-          patients physical & mental well being It will take 45-60 mins of time
-          .
+          we take brief case history for 45-60 mins . Prescription based on
+          patients physical & mental well being
         </p>
       </div>
       <img
         class="cliping sm:h-[30vw] sm:w-[30vw] h-[80vw] w-[80vw] max-sm:self-end max-sm:mt-4 max-sm:mr-4"
-        src="plus.png"
+        src="public/plus.png"
         alt=""
       />
     </section>
     <section
-      class="text-center flex flex-col justify-center sm:min-h-screen items-center"
+      class="text-center flex flex-col justify-center sm:min-h-[80vh] items-center"
     >
       <h2 class="mb-[5vw]">Your health, always our priority</h2>
       <p class="w-11/12">
         💬Ready to Begin your Holistic Healing Journey? DM us to book an online
         consultation and experience the gentle effectiveness of homeopathy! 🌿✨
       </p>
+    </section>
+    <section
+      class="text-center flex flex-col justify-center sm:min-h-[80vh] items-center"
+    >
+      <h2>Watch our related videos</h2>
+      <div class="sm:flex-row flex-col flex gap-4 mt-[4vw]">
+        <div class="sm:w-[30vw] sm:h-[20vw]">
+          <iframe
+            class="w-full h-full rounded-lg"
+            src="https://www.youtube.com/embed/gVzHNGyA_a4?si=bND8jSxreJsCg2MJ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="sm:w-[30vw]">
+          <iframe
+            class="w-full h-full rounded-lg"
+            src="https://www.youtube.com/embed/gVzHNGyA_a4?si=bND8jSxreJsCg2MJ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
     </section>
     <section
       class="max-sm:flex-col flex justify-around items-center max-sm:mt-16"
@@ -228,7 +280,11 @@
           specific health concerns.
         </p>
       </div>
-      <img class="max-sm:hidden h-[25vw] w-[25vw]" src="page6.png" alt="" />
+      <img
+        class="max-sm:hidden h-[25vw] w-[25vw]"
+        src="public/page6.png"
+        alt=""
+      />
     </section>
     <section
       id="contact"
@@ -237,7 +293,7 @@
       <div
         class="sm:w-1/2 w-full max-sm:flex justify-center flex-col items-center max-sm:bg-white max-sm:pb-3"
       >
-        <img class="sm:w-1/2 w-full" src="page7.png" alt="" />
+        <img class="sm:w-1/2 w-full" src="public/page7.png" alt="" />
         <p class="mt-8 text-[3vw]">Contact Us</p>
         <a
           href="https://wa.me/+919490414679"
@@ -254,7 +310,11 @@
           <p class="ml-[2vw] text-[4vw]">dr.amrutas_homoeo</p></a
         >
       </div>
-      <img class="max-sm:hidden w-4/12 h-auto" src="page7-2.png" alt="" />
+      <img
+        class="max-sm:hidden w-4/12 h-auto"
+        src="public/page7-2.png"
+        alt=""
+      />
     </section>
     <p class="text-right mr-3 p-2">
       <i class="fa-regular fa-copyright"></i> 2023 Amrutha's Homeopathy
