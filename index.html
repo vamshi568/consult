@@ -2,11 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dr. Amrutha's Homeo </title>
-    <meta name="description" content="Experience holistic healing with Dr. Amrutha's Homeo. We provide personalized homeopathic treatments for overall well-being. Schedule an online consultation now!" />
-    <meta name="keywords" content="homeopathy, holistic healing, online consultation, natural remedies, personalized care, homeo in hyderabad " />
+    <title>Dr. Amrutha's Homeo</title>
+    <meta
+      name="description"
+      content="Experience holistic healing with Dr. Amrutha's Homeo. We provide personalized homeopathic treatments for overall well-being. Schedule an online consultation now!"
+    />
+    <meta
+      name="keywords"
+      content="homeopathy, holistic healing, online consultation, natural remedies, personalized care, homeo in hyderabad "
+    />
 
     <link
       rel="apple-touch-icon"
@@ -150,7 +156,7 @@
 
     <header id="home">
       <div class="main1 z-10">
-        <h1 class="leading-none ">Your Health, <br />Our Mission</h1>
+        <h1 class="leading-none">Your Health, <br />Our Mission</h1>
         <h2>Addressing every need</h2>
       </div>
       <div class="main2 z-10">
@@ -259,11 +265,14 @@
       </p>
     </section>
     <section
-      class="text-center flex flex-col justify-center sm:min-h-[80vh] max-sm:mt-8 items-center"
+      class="text-center flex flex-col justify-center sm:min-h-[80vh] sm:mb-8 max-sm:mt-8 items-center"
     >
       <h2>Watch our related videos</h2>
-      <div class="sm:flex-row flex-col flex gap-4 mt-[4vw]">
-        <div class="sm:w-[30vw] sm:h-[20vw]">
+      <div
+        class="sm:flex-row flex-col flex-wrap items-center justify-center flex gap-4 mt-[4vw]"
+        id="videos-container"
+      >
+        <!-- <div class="sm:w-[30vw] sm:h-[20vw]">
           <iframe
             class="w-full h-full rounded-lg"
             src="https://youtube.com/embed/dpER07Pfafo?si=F7Mjp68SSYH7Vzip"
@@ -292,7 +301,7 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
-        </div>
+        </div> -->
       </div>
     </section>
     <section
@@ -322,24 +331,72 @@
         alt="amrutas homoeo"
       />
     </section>
-    <section id="contact" class="max-sm:flex-col flex justify-around items-center mt-10">
-      <div class="sm:w-1/2 w-full max-sm:flex justify-center flex-col items-center max-sm:bg-white max-sm:pb-3">
-          <img class="sm:w-1/2 w-full" src="public/page7.png" alt="amrutas homoeo" />
-          <p class="mt-8 text-[3vw]">Contact Us</p>
-          <a href="https://wa.me/+919490414679" target="_blank" class="text-[4vw] flex items-center mt-[3vw]">
-              <i class="fa-brands fa-whatsapp"></i>
-              <p class="ml-[2vw] text-[4vw]">9490414679</p>
-          </a>
-          <a href="https://www.instagram.com/dr.amrutas_homoeo/?hl=en" target="_blank"
-              class="text-[4vw] flex items-center mt-[2vw]">
-              <i class="fa-brands fa-instagram"></i>
-              <p class="ml-[2vw] text-[4vw]">dr.amrutas_homoeo</p>
-          </a>
+    <section
+      id="contact"
+      class="max-sm:flex-col flex justify-around items-center mt-10"
+    >
+      <div
+        class="sm:w-1/2 w-full max-sm:flex justify-center flex-col items-center max-sm:bg-white max-sm:pb-3"
+      >
+        <img
+          class="sm:w-1/2 w-full"
+          src="public/page7.png"
+          alt="amrutas homoeo"
+        />
+        <p class="mt-8 text-[3vw]">Contact Us</p>
+        <a
+          href="https://wa.me/+919490414679"
+          target="_blank"
+          class="text-[4vw] flex items-center mt-[3vw]"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          <p class="ml-[2vw] text-[4vw]">9490414679</p>
+        </a>
+        <a
+          href="https://www.instagram.com/dr.amrutas_homoeo/?hl=en"
+          target="_blank"
+          class="text-[4vw] flex items-center mt-[2vw]"
+        >
+          <i class="fa-brands fa-instagram"></i>
+          <p class="ml-[2vw] text-[4vw]">dr.amrutas_homoeo</p>
+        </a>
       </div>
-      <img class="max-sm:hidden w-4/12 h-auto" src="public/page7-2.png" alt="amrutas homoeo" />
-  </section>
-  <p class="text-right mr-3 p-2">
-    <i class="fa-regular fa-copyright"></i> 2023 Dr. Amrutha's Homeopathy
-</p>
+      <img
+        class="max-sm:hidden w-4/12 h-auto"
+        src="public/page7-2.png"
+        alt="amrutas homoeo"
+      />
+    </section>
+    <p class="text-right mr-3 p-2">
+      <i class="fa-regular fa-copyright"></i> 2023 Dr. Amrutha's Homeopathy
+    </p>
+
+    <script>
+      const apiKey = "AIzaSyD_HvYJt6kSJqFvi9IFlFiqOYK-nN5kTi4";
+      const channelId = "UCXsesRIhU3cE_u9YP8ebdQA";
+
+      fetch(
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&key=${apiKey}`
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          const videosContainer = document.getElementById("videos-container");
+          data.items.forEach((video) => {
+            const videoId = video.id.videoId;
+            const thumbnailUrl = video.snippet.thumbnails.default.url;
+
+            const videoElement = document.createElement("div");
+            videoElement.innerHTML = `
+              <div class="sm:w-[30vw] sm:h-[20vw]">
+                
+                <iframe class="w-full h-full rounded-lg" width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>
+                </div>
+              `;
+
+            videosContainer.appendChild(videoElement);
+          });
+        })
+        .catch((error) => console.error("Error fetching videos:", error));
+    </script>
   </body>
 </html>
